@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.2.1
   flutter_carousel_widget: ^2.0.4
+  easy_container: ^1.0.4+1
+  flutter_floating_bottom_bar: ^1.1.0
+  flutter_svg: ^2.0.7
+  riverpod: ^2.3.6
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +70,7 @@ flutter:
      - assets/images/Android.png
      - assets/images/Web.png
      - assets/images/Design.png
+     - assets/images/antiVirus.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

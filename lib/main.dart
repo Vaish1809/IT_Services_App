@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:orinova_it_servicesapp/Screens/Cart.dart';
 import 'package:orinova_it_servicesapp/Screens/MainHomePage.dart';
+import 'package:orinova_it_servicesapp/Screens/Search.dart';
+import 'package:orinova_it_servicesapp/Screens/Wishlist.dart';
+import 'package:orinova_it_servicesapp/Screens/selected%20categories.dart';
+import 'package:orinova_it_servicesapp/Screens/tabs.dart';
+import 'package:riverpod/riverpod.dart';
 
+
+final navigationProvider = StateProvider<int>((ref) => 0);
 void main() {
   //SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,10 +23,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor:Color.fromARGB(255, 255, 255, 255)),
+    useMaterial3: true,
+    
       ),
-      home: MainHomePage()
+      home: TabsScreen(),
       
     );
   }
