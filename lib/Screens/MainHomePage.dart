@@ -13,9 +13,12 @@ class MainHomePage extends StatefulWidget {
 
 class _MainHomePageState extends State<MainHomePage> {
   final List<String> imgList = [
-    'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
-    'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
-    'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80',
+
+   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
   ];
 
   @override
@@ -30,14 +33,12 @@ class _MainHomePageState extends State<MainHomePage> {
               padding: EdgeInsets.only(top: 60, left: 25, right: 25),
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.logo_dev,
-                    size: 40,
-                  ),
+                  Image.asset("assets/images/logo.png",height: 40,),
                   const Spacer(),
                   const Icon(
                     Icons.favorite_outline_sharp,
                     size: 35,
+                    color: Colors.redAccent,
                   ),
                   IconButton(
                     onPressed: () {
@@ -61,10 +62,13 @@ class _MainHomePageState extends State<MainHomePage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30)),
                       child: Center(
-                        child: Image.network(
-                          item,
-                          fit: BoxFit.cover,
-                          width: 1000,
+                        child: ClipRRect(
+                     borderRadius: BorderRadius.circular(20),
+                          child: Image.network(
+                            item,
+                            fit: BoxFit.cover,
+                            width: 1000,
+                          ),
                         ),
                       ),
                     ),
