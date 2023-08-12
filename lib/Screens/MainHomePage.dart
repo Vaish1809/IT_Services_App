@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_container/easy_container.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
+import 'package:orinova_it_servicesapp/Screens/Wishlist.dart';
 import 'package:orinova_it_servicesapp/Screens/notifications.dart';
 import 'package:orinova_it_servicesapp/Screens/selected%20categories.dart';
-import 'package:animated_flip_counter/animated_flip_counter.dart';
+//import 'package:animated_flip_counter/animated_flip_counter.dart';
 
 class MainHomePage extends StatefulWidget {
   MainHomePage({super.key});
@@ -45,7 +46,8 @@ class _MainHomePageState extends State<MainHomePage> {
                       Icons.favorite_border_rounded,
                       size: 30,
                     ),
-                    onPressed: () {},
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => WishlistScreen(),)
+                    );},
                     color: Colors.redAccent,
                   ),
                   IconButton(
@@ -95,7 +97,7 @@ class _MainHomePageState extends State<MainHomePage> {
             Container(
               width: double.infinity,
               height: 73,
-              color: Color(0xFFECF9FF),
+              color: Color.fromARGB(150, 236, 249, 255,),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -107,13 +109,13 @@ class _MainHomePageState extends State<MainHomePage> {
                     Text(
                         "350",
                         style: TextStyle(
-                            fontSize: 22.14, fontWeight: FontWeight.bold
+                            fontSize: 22.14, fontWeight: FontWeight.bold, color: Color(0xFF303841)
  
   ),
                       ),
                       Text(
                         "projects done",
-                        style: TextStyle(fontSize: 11.52),
+                        style: TextStyle(fontSize: 11.52, color: Color(0xFF303841)), 
                       )
                     ],
                   ),
@@ -123,11 +125,11 @@ class _MainHomePageState extends State<MainHomePage> {
                       Text(
                         "350",
                         style: TextStyle(
-                            fontSize: 22.14, fontWeight: FontWeight.bold),
+                            fontSize: 22.14, fontWeight: FontWeight.bold, color: Color(0xFF303841)),
                       ),
                       Text(
                         "ongoing projects",
-                        style: TextStyle(fontSize: 11.52),
+                        style: TextStyle(fontSize: 11.52, color: Color(0xFF303841)),
                       )
                     ],
                   ),
@@ -138,11 +140,11 @@ class _MainHomePageState extends State<MainHomePage> {
                       Text(
                         "350",
                         style: TextStyle(
-                            fontSize: 22.14, fontWeight: FontWeight.bold),
+                            fontSize: 22.14, fontWeight: FontWeight.bold, color: Color(0xFF303841)),
                       ),
                       Text(
                         "projects done",
-                        style: TextStyle(fontSize: 11.52),
+                        style: TextStyle(fontSize: 11.52, color: Color(0xFF303841)),
                       )
                     ],
                   ),
@@ -160,9 +162,11 @@ class _MainHomePageState extends State<MainHomePage> {
                   child: Text(
                     "Top Stacks",
                     style:
-                        TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold, color: Color(0xFF303841)),
                   )),
-         ),
+         ), const SizedBox(
+              height: 10,
+            ),
             Container(
               height: 61,
               padding: EdgeInsets.only(right: 25, left: 25),
@@ -214,17 +218,19 @@ class _MainHomePageState extends State<MainHomePage> {
                   ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
+              padding: EdgeInsets.only(left: 25, right: 25,top: 18),
              child:
                Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Our Services",
                     style:
-                        TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold, color: Color(0xFF303841)),
                   )),
        ),
-
+const SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: EdgeInsets.only(bottom: 100),
               child: Wrap(
@@ -259,7 +265,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                 child: const Text(
                                   "Website",
                                   style: TextStyle(
-                                      fontSize: 17.81, fontWeight: FontWeight.w400),
+                                      fontSize: 17.81, fontWeight: FontWeight.w400, color: Color(0xFF303841)),
                                 ),
                               ),
                             ),
@@ -304,11 +310,11 @@ class _MainHomePageState extends State<MainHomePage> {
             //           height: 105,
             //           width: 180,
             //   // color: const Color.fromARGB(255, 250, 250, 250),
-            //         child: Container(height: 66,color: Colors.black12,),
+            //         child: Container(height: 66,color: Color(0xFF303841)12,),
             //         ),
             // Align(
             //   alignment: Alignment.bottomCenter,
-            //   child: Container(height: 66,alignment: Alignment.bottomCenter,color: Colors.black12,)),
+            //   child: Container(height: 66,alignment: Alignment.bottomCenter,color: Color(0xFF303841)12,)),
             //       Positioned(
             //         bottom: 0,
             //         child: Container(
@@ -374,14 +380,14 @@ class _MainHomePageState extends State<MainHomePage> {
 
 //                               decoration: BoxDecoration(
 //                                 borderRadius: BorderRadius.circular(8),
-//                                 color: Color(0xFFECF9FF),
+//                                 color: Color.fromARGB(150, 236, 249, 255,),
 //                               ),
 //                               // Replace with your desired color
 //                               child: Center(
 //                                 child: Text(
 //                                   "Android Development",
 //                                   style: TextStyle(
-//                                     color: Colors.black,
+//                                     color: Color(0xFF303841),
 //                                     fontSize: 15.81,
 //                                   ),
 //                                   textAlign: TextAlign.center,

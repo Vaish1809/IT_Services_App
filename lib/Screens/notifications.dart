@@ -11,7 +11,7 @@ class NotificationsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:Colors.white ,
         centerTitle: true,
-        title: Text("Notifications",style: TextStyle(fontSize: 24.24,fontWeight: FontWeight.w700),textAlign: TextAlign.center,),
+        title: Text("Notifications",style: TextStyle(fontSize: 24.24,fontWeight: FontWeight.w700,  color: Color(0xFF303841)),textAlign: TextAlign.center,),
       ),
       body: Container(
         margin: const EdgeInsets.all(25),
@@ -35,7 +35,7 @@ class NotificationsScreen extends StatelessWidget {
                   // width: 83,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFFECF9FF)),
+                      color: Color.fromARGB(150, 236, 249, 255,)),
                   alignment: Alignment.center,
                   //child: FittedBox( fit:BoxFit.contain,
                   child: Text(
@@ -72,7 +72,7 @@ class NotificationsScreen extends StatelessWidget {
                   // width: 83,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFFECF9FF)),
+                      color: Color.fromARGB(150, 236, 249, 255,)),
                   alignment: Alignment.center,
                   //child: FittedBox( fit:BoxFit.contain,
                   child: Text(
@@ -109,7 +109,7 @@ class NotificationsScreen extends StatelessWidget {
                   // width: 83,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFFECF9FF)),
+                      color: Color.fromARGB(150, 236, 249, 255,)),
                   alignment: Alignment.center,
                   //child: FittedBox( fit:BoxFit.contain,
                   child: Text(
@@ -146,7 +146,7 @@ class NotificationsScreen extends StatelessWidget {
                   // width: 83,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFFECF9FF)),
+                      color: Color.fromARGB(150, 236, 249, 255,)),
                   alignment: Alignment.center,
                   //child: FittedBox( fit:BoxFit.contain,
                   child: Text(

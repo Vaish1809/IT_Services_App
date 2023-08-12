@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:orinova_it_servicesapp/Screens/Payment.dart';
+import 'package:orinova_it_servicesapp/Screens/Wishlist.dart';
 import 'package:orinova_it_servicesapp/Screens/notifications.dart';
 
 class ServiceDetails extends StatefulWidget {
@@ -21,7 +22,13 @@ class _ServiceDetailsState extends State<ServiceDetails> {
             Icons.favorite_border_rounded,
             size: 30,
           ),
-          onPressed: () {},
+          onPressed: () {
+
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => WishlistScreen(),)
+                    );
+                  
+          },
+          
           color: Colors.redAccent,
         ),
         IconButton(
@@ -76,19 +83,19 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                         style: TextStyle(
                             fontSize: 22.14,
                             fontWeight: FontWeight.w700,
-                            color: Colors.black),
+                            color: Color(0xFF303841)),
                       ),
                       const Spacer(),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Color(0xFFECF9FF),
+                          color: Color.fromARGB(150, 236, 249, 255,),
                         ),
                         child: IconButton(
                           onPressed: () {},
                           icon: const Icon(
                             Icons.trolley,
-                            color: Colors.black,
+                            color: Color(0xFF303841),
                             size: 30,
                           ),
                         ),
@@ -110,7 +117,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                         style: TextStyle(
                             fontSize: 17.81,
                             fontWeight: FontWeight.w300,
-                            color: Colors.black),
+                            color: Color(0xFF303841)),
                       ),
                       SizedBox(
                         width: 10,
@@ -136,7 +143,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                     style: TextStyle(
                         fontSize: 17.81,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black),
+                        color: Color(0xFF303841)),
                   ),
                   const ExpandableText(
                     "Our expert technicians will thoroughly scan your device, identify any viruses or malware, and safely remove them. We will also provide recommendations to prevent future infections.",
@@ -147,7 +154,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: Color(0xFF303841),
                       height: 1.5,
                     ),
                   ),
@@ -159,7 +166,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                     style: TextStyle(
                         fontSize: 17.81,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black),
+                        color: Color(0xFF303841)),
                   ),
                   const ExpandableText(
                     "Our expert technicians will thoroughly scan your device, identify any viruses or malware, and safely remove them. We will also provide recommendations to prevent future infections.",
@@ -170,7 +177,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: Color(0xFF303841),
                       height: 1.5,
                     ),
                   ),
@@ -182,14 +189,14 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                     style: TextStyle(
                         fontSize: 17.81,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black),
+                        color: Color(0xFF303841)),
                   ),
                   const Text(
                     "User 1",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: Color(0xFF303841),
                       height: 1.5,
                     ),
                   ),
@@ -206,7 +213,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color: Color(0xFF303841),
                             height: 1.5,
                           ),
                         ),
@@ -234,7 +241,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: Color(0xFF303841),
                       height: 1.5,
                     ),
                   ),
@@ -251,7 +258,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color: Color(0xFF303841),
                             height: 1.5,
                           ),
                         ),
@@ -298,7 +305,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w400,
-                              color: Colors.black),
+                              color: Color(0xFF303841)),
                         ),
                         // const SizedBox(height: 0.2,),
                         Row(
@@ -307,12 +314,12 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                                 style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.black)),
+                                    color: Color(0xFF303841))),
                             Text(" 5,999",
                                 style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.black)),
+                                    color: Color(0xFF303841))),
                           ],
                         )
                       ],
@@ -323,12 +330,12 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                       child: FloatingActionButton(
                         onPressed: () {},
                         elevation: 0,
-                        backgroundColor: Color(0xFFECF9FF),
+                        backgroundColor: Color.fromARGB(150, 236, 249, 255,),
                         child: TextButton(
                           child:const  Text(
                           "Checkout",
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w700,color: Colors.black),  
+                              fontSize: 14, fontWeight: FontWeight.w700,color: Color(0xFF303841)),  
                           ),
                           onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentScreen(),));

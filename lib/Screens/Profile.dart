@@ -29,7 +29,7 @@
 //               Container(
 //                 decoration: BoxDecoration(
 //                     //  borderRadius: BorderRadius.circular(25),
-//                     color: Color(0xFFECF9FF)),
+//                     color: Color.fromARGB(150, 236, 249, 255,)),
 //                 height: 86,
 //                 width: double.infinity,
 //                 child: Stack(
@@ -234,7 +234,7 @@
 //                             child: FloatingActionButton(
 //                               onPressed: () {},
 //                               elevation: 0,
-//                               backgroundColor: Color(0xFFECF9FF),
+//                               backgroundColor: Color.fromARGB(150, 236, 249, 255,),
 //                               child: Text(
 //                                 "Submit",
 //                                 style: TextStyle(
@@ -279,7 +279,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         bottomOpacity: 0,
         title: Text(
           "Profile",
-          style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700),
+          style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700, color: Color(0xFF303841)),
           textAlign: TextAlign.center,
         ),
         centerTitle: true,

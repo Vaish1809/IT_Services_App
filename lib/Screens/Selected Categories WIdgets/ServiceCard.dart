@@ -22,7 +22,7 @@ class ServiceCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: Color(0xFFECF9FF),
+          color: Color.fromARGB(150, 236, 249, 255,),
         ),
         height: 114,
         width: double.infinity,
@@ -52,18 +52,18 @@ class ServiceCard extends StatelessWidget {
                   children: [
                     Text(
                       service.title,
-                      style: TextStyle(
+                      style: TextStyle( color: Color(0xFF303841),
                         fontSize: 17.81,
                         fontWeight: FontWeight.w700,
                       ),
                     ),
                     Text(
                       service.description,
-                      style: TextStyle(fontSize: 11.52),
+                      style: TextStyle(fontSize: 11.52, color: Color(0xFF303841)),
                     ),
                     Text(
                       service.provider,
-                      style: TextStyle(fontSize: 11.52, height: 0.8),
+                      style: TextStyle(fontSize: 11.52, color: Color(0xFF303841), height: 0.8),
                     ),
                     Row(
                       children: [
@@ -122,7 +122,7 @@ class ServiceCard extends StatelessWidget {
                       size: 25,
                     ),
                   ),
-                  Text("INR ${service.price.toString()}"),
+                  Text("INR ${service.price.toString()}",style: TextStyle( color: Color(0xFF303841)),),
                   SizedBox(width: 10),
                 ],
               ),

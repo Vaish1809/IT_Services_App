@@ -6,7 +6,7 @@ return
 Container(
                 decoration: BoxDecoration(
                     //  borderRadius: BorderRadius.circular(25),
-                    color: Color(0xFFECF9FF)),
+                    color: Color.fromARGB(150, 236, 249, 255,)),
                 height: 86,
                 width: double.infinity,
                 child: Stack(
@@ -40,13 +40,13 @@ Container(
                             children: [
                               Text(
                                 "Vaishnavi Pdiya",
-                                style: TextStyle(
+                                style: TextStyle( color: Color(0xFF303841),
                                     fontSize: 17.81,
                                     fontWeight: FontWeight.w700),
                               ),
                               Text(
                                 "vbhfnid@gmial.com ",
-                                style: TextStyle(fontSize: 11.52, height: 1),
+                                style: TextStyle( color: Color(0xFF303841),fontSize: 11.52, height: 1),
                               ),
                             ],
                           ),

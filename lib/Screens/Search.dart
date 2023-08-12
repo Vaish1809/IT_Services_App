@@ -26,7 +26,7 @@ class _SearchScreenState extends State<SearchScreen> {
           centerTitle: true,
           title: Text(
             "Search",
-            style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700),
+            style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700, color: Color(0xFF303841)),
             textAlign: TextAlign.center,
           ),
         ),
@@ -45,14 +45,14 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   child: TextField(
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 16, color: Color(0xFF303841)
                     ),
                     controller: controller,
                     decoration: InputDecoration(
                       hintText: "Search ",
                       border: InputBorder.none,
-                      labelStyle: const TextStyle(fontSize: 16),
-                      prefixIcon: Icon(Icons.search, color: Colors.black),
+                      labelStyle: const TextStyle(fontSize: 16, color: Color(0xFF303841)),
+                      prefixIcon: Icon(Icons.search, color: Color(0xFF303841)),
                       suffixIcon: IconButton(
                         icon: const Icon(Icons.clear),
                         onPressed: () {
@@ -70,7 +70,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     child: Text(
                       "Our Services",
                       style:
-                          TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 22.14,  color: Color(0xFF303841),fontWeight: FontWeight.bold),
                     )),
                 const SizedBox(
                   height: 21,
@@ -107,14 +107,14 @@ class _SearchScreenState extends State<SearchScreen> {
                                     height: 77,            
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
-                                    color: Color(0xFFECF9FF),
+                                    color: Color.fromARGB(150, 236, 249, 255,),
                                   ),
                                   // Replace with your desired color
                                   child: Center(
                                     child: Text(
                                       "Android Development",
                                       style: TextStyle(
-                                        color: Colors.black,
+                                        color: Color(0xFF303841),
                                         fontSize: 15.81,
                                       ),
                                       textAlign: TextAlign.center,
@@ -156,14 +156,14 @@ class _SearchScreenState extends State<SearchScreen> {
                                               
                             //     decoration: BoxDecoration(
                             //       borderRadius: BorderRadius.circular(8),
-                            //       color: Color(0xFFECF9FF),
+                            //       color: Color.fromARGB(150, 236, 249, 255,),
                             //     ),
                             //     // Replace with your desired color
                             //     child: Center(
                             //       child: Text(
                             //         "Android Development",
                             //         style: TextStyle(
-                            //           color: Colors.black,
+                            //           color: Color(0xFF303841),
                             //           fontSize: 15.81,
                             //         ),
                             //         textAlign: TextAlign.center,

@@ -37,7 +37,7 @@ class _CartScreenState extends State<CartScreen> {
         centerTitle: true,
         title: Text(
           "My Cart",
-          style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700),
+          style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700,  color: Color(0xFF303841)),
           textAlign: TextAlign.center,
         ),
       ),
@@ -98,7 +98,7 @@ class _CartScreenState extends State<CartScreen> {
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w400,
-                              color: Colors.black),
+                              color: Color(0xFF303841)),
                         ),
                         // const SizedBox(height: 0.2,),
                         Row(
@@ -107,12 +107,12 @@ class _CartScreenState extends State<CartScreen> {
                                 style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.black)),
+                                    color: Color(0xFF303841))),
                             Text(" 5,999",
                                 style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.black)),
+                                    color: Color(0xFF303841))),
                           ],
                         )
                       ],
@@ -123,12 +123,12 @@ class _CartScreenState extends State<CartScreen> {
                       child: FloatingActionButton(
                         onPressed: () {},
                         elevation: 0,
-                        backgroundColor: Color(0xFFECF9FF),
+                        backgroundColor: Color.fromARGB(150, 236, 249, 255,),
                         child: TextButton(
                           child:const  Text(
                           "Checkout",
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w700,color: Colors.black),  
+                              fontSize: 14, fontWeight: FontWeight.w700,color: Color(0xFF303841)),  
                           ),
                           onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentScreen(),));

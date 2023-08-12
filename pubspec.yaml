@@ -43,11 +43,14 @@ dependencies:
   riverpod: ^2.3.6
   expandable_text: ^2.3.0
   custom_check_box: ^0.0.4
-  animated_flip_counter: ^0.2.6
-  flutter_credit_card: ^3.0.7
-  tinkoff_acquiring_flutter: ^3.0.10
-  counter: ^0.2.2
+  # animated_flip_counter: ^0.2.6
+  # flutter_credit_card: ^3.0.7
+  # tinkoff_acquiring_flutter: ^3.0.10
+  # counter: ^0.2.2
   dot_navigation_bar: ^1.0.2
+  google_nav_bar: ^5.0.6
+  google_fonts: ^5.1.0
+  icons_plus: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +82,7 @@ flutter:
      - assets/images/Design.png
      - assets/images/antiVirus.jpg
      - assets/images/logo.png
+     - assets/images/Home.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

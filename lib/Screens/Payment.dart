@@ -22,7 +22,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         centerTitle: true,
         title: const Text(
           "Checkout",
-          style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700),
+          style: TextStyle(fontSize: 24.24, fontWeight: FontWeight.w700, color: Color(0xFF303841)),
           textAlign: TextAlign.center,
         ),
       ),
@@ -40,7 +40,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     style: TextStyle(
                         fontSize: 17.81,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black),
+                        color: Color(0xFF303841)),
                   ),
                   const SizedBox(
                     height: 25,
@@ -63,7 +63,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                       const Text(
                         "Credit Card",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
                       ),
                       Spacer(),
                       CustomCheckBox(
@@ -100,7 +100,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                       const Text(
                         "UPI",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
                       ),
                       Spacer(),
                       CustomCheckBox(
@@ -138,7 +138,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                       const Text(
                         "Net Banking",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
                       ),
                       Spacer(),
                       CustomCheckBox(
@@ -162,7 +162,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     style: TextStyle(
                         fontSize: 17.81,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black),
+                        color: Color(0xFF303841)),
                   ),
                   const SizedBox(
                     height: 25,
@@ -171,12 +171,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     children: [
                       Text(
                         "Anti Virus Installation",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
                       ),
                       Spacer(),
                       Text(
                         "INR 34,000",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
                       ),
                     ],
                   ),
@@ -187,12 +187,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     children: [
                       Text(
                         "Anti Virus Installation",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
                       ),
                       Spacer(),
                       Text(
                         "INR 34,000",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
                       ),
                     ],
                   ),
@@ -212,7 +212,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         style: TextStyle(
                             fontSize: 22.14,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black),
+                            color: Color(0xFF303841)),
                       ),
                       Spacer(),
                       Text(
@@ -220,7 +220,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         style: TextStyle(
                             fontSize: 22.14,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black),
+                            color: Color(0xFF303841)),
                       ),
                     ],
                   ),
@@ -247,7 +247,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w400,
-                              color: Colors.black),
+                              color: Color(0xFF303841)),
                         ),
                         // const SizedBox(height: 0.2,),
                         Row(
@@ -256,12 +256,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                 style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.black)),
+                                    color: Color(0xFF303841))),
                             Text(" 5,999",
                                 style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.black)),
+                                    color: Color(0xFF303841))),
                           ],
                         )
                       ],
@@ -272,14 +272,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       child: FloatingActionButton(
                         onPressed: () {},
                         elevation: 0,
-                        backgroundColor: Color(0xFFECF9FF),
+                        backgroundColor: Color.fromARGB(150, 236, 249, 255,),
                         child: TextButton(
                           child: const Text(
                             "Proceed to Pay",
                             style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color: Colors.black),
+                                color: Color(0xFF303841)),
                           ),
                           onPressed: () {
                             Navigator.push(

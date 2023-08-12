@@ -8,7 +8,7 @@ Widget buildRow(BuildContext context ,  String text) {
     children: [
       Text(
         text,
-        style: TextStyle(fontSize: 17.81, fontWeight: FontWeight.w400),
+        style: TextStyle(fontSize: 17.81, fontWeight: FontWeight.w400, color: Color(0xFF303841)),
       ),
       Spacer(),
       IconButton(
@@ -30,7 +30,7 @@ Widget buildMessageRow() {
       Text(
         "Send a message",
         
-        style: TextStyle(fontSize: 17.81, fontWeight: FontWeight.w400),
+        style: TextStyle( color: Color(0xFF303841),fontSize: 17.81, fontWeight: FontWeight.w400),
       ),
       const SizedBox(height: 15),
       Container(
@@ -42,7 +42,7 @@ Widget buildMessageRow() {
         padding: EdgeInsets.symmetric(horizontal: 8),
         child: TextField(
           controller: controller,
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 15, color: Color(0xFF303841)),
           decoration: InputDecoration(
             hintText: "Write a message...",
             border: InputBorder.none,
@@ -61,10 +61,10 @@ Widget buildMessageRow() {
           child: FloatingActionButton(
             onPressed: () {},
             elevation: 0,
-            backgroundColor: Color(0xFFECF9FF),
+            backgroundColor: Color.fromARGB(150, 236, 249, 255,),
             child: Text(
               "Submit",
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+              style: TextStyle(fontSize: 14, color: Color(0xFF303841), fontWeight: FontWeight.w700),
             ),
           ),
         ),

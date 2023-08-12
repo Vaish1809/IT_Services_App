@@ -7,7 +7,7 @@ import 'package:orinova_it_servicesapp/Screens/Wishlist.dart';
 import 'package:orinova_it_servicesapp/Screens/selected%20categories.dart';
 import 'package:orinova_it_servicesapp/Screens/tabs.dart';
 import 'package:riverpod/riverpod.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 final navigationProvider = StateProvider<int>((ref) => 0);
 void main() {
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+       // textTheme: GoogleFonts.latoTextTheme(Theme.of(context).textTheme),
         colorScheme: ColorScheme.fromSeed(seedColor:Color.fromARGB(255, 255, 255, 255)),
     useMaterial3: true,
     
