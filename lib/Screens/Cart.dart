@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:orinova_it_servicesapp/Screens/Payment.dart';
+import 'package:orinova_it_servicesapp/Screens/ProfileScreens/SignOut.dart';
+import 'package:orinova_it_servicesapp/Screens/Selected%20Categories%20WIdgets/ServiceCard.dart';
+import 'package:orinova_it_servicesapp/Screens/Selected%20Categories%20WIdgets/model.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -8,20 +12,26 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
- 
-    int _currentIndex = 0;
 
-    void _onTabTapped(int index) {
-      setState(() {
-        _currentIndex = index;
-      });
-    }
+  final TextEditingController controller = TextEditingController();
+
+  List<ServiceModel> services = [
+    // Populate this list with your service data
+    ServiceModel(
+      title: "Anti Virus Installation",
+      description: "Lorem ipsum dolor sit amet, consecter",
+      provider: "Abc Service Provider",
+      rating: 4.3,
+      imageUrl: "assets/images/antiVirus.jpg",
+      price: 5999,
+    ),
+    // Add more service items here
+  ];
+
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       extendBodyBehindAppBar: false,
- 
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
@@ -31,420 +41,108 @@ class _CartScreenState extends State<CartScreen> {
           textAlign: TextAlign.center,
         ),
       ),
-      body: Container(
-        margin: const EdgeInsets.all(25),
-        constraints: BoxConstraints.expand(),
-       
-        child: Stack(
-          children:[ SingleChildScrollView(
-        scrollDirection: Axis.vertical,
+      body: Stack(
+        children: [
+          SingleChildScrollView(
             child: Container(
+              margin: const EdgeInsets.only(bottom: 100, left: 25, right: 25),
               child: Column(
                 children: [
-                 
-              
-              
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0xFFECF9FF)),
-                    height: 114,
-                    width: double.infinity,
-                    child: Stack(children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                              margin: EdgeInsets.only(left: 14, right: 14),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16)),
-                              height: 71,
-                              width: 62,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(16),
-                                child: Image.asset(
-                                  "assets/images/antiVirus.jpg",
-                                  fit: BoxFit.cover,
-                                ),
-                              )),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Anti Virus Installation",
-                                style: TextStyle(
-                                    fontSize: 17.81, fontWeight: FontWeight.w700),
-                              ),
-                              Text(
-                                "Lorem ipsum dolor sit amet, consecter ",
-                                style: TextStyle(
-                                  fontSize: 11.52,
-                                ),
-                              ),
-                              Text(
-                                "Abc Service Provider ",
-                                style: TextStyle(fontSize: 11.52, height: 0.8),
-                              ),
-const SizedBox(height: 3,),
-                              Row(
-                    
-                                children: [
-                                  Icon(
-                                    Icons.star_rounded,
-                                    size: 12,color: Color(0xFFFFC23C),
-                                  ),
-                                  const SizedBox(width: 5),
-                                  Text(
-                                    "4.3",
-                                    style: TextStyle(fontSize: 10,color: Color(0xFFFFC23C),fontWeight: FontWeight.w700)
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite_border_rounded,
-                              size: 25,
-                              color: Colors.redAccent,
-                            )),
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.trolley,
-                                  size: 25,
-                                )),
-                            Text("INR 5,999 "),
-                            const SizedBox(
-                              width: 10,
-                            )
-                          ],
-                        ),
-                      ),
-                    ]),
-                  ),
-                      
-                      
-                      const SizedBox(
-                    height: 21,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0xFFECF9FF)),
-                    height: 114,
-                    width: double.infinity,
-                    child: Stack(children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                              margin: EdgeInsets.only(left: 14, right: 14),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16)),
-                              height: 71,
-                              width: 62,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(16),
-                                child: Image.asset(
-                                  "assets/images/antiVirus.jpg",
-                                  fit: BoxFit.cover,
-                                ),
-                              )),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Anti Virus Installation",
-                                style: TextStyle(
-                                    fontSize: 17.81, fontWeight: FontWeight.w700),
-                              ),
-                              Text(
-                                "Lorem ipsum dolor sit amet, consecter ",
-                                style: TextStyle(
-                                  fontSize: 11.52,
-                                ),
-                              ),
-                              Text(
-                                "Abc Service Provider ",
-                                style: TextStyle(fontSize: 11.52, height: 0.8),
-                              ),
-                             const SizedBox(height: 3,),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.star_rounded,
-                                    size: 12,color: Color(0xFFFFC23C),
-                                  ),
-                                  const SizedBox(width: 5),
-                                  Text(
-                                    "4.3",
-                                    style: TextStyle(fontSize: 10,color: Color(0xFFFFC23C),fontWeight: FontWeight.w700)
-                                  )
-                            ],
-                              ),
-                            ]
-                          )
-                        ],
-                      ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite_border_rounded,
-                              size: 25,
-                              color: Colors.redAccent,
-                            )),
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.trolley,
-                                  size: 25,
-                                )),
-                            Text("INR 5,999 "),
-                            const SizedBox(
-                              width: 10,
-                            )
-                          ],
-                        ),
-                      ),
-                    ]),
-                  ),
-                      
-                      
-                      const SizedBox(
-                    height: 21,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0xFFECF9FF)),
-                    height: 114,
-                    width: double.infinity,
-                    child: Stack(children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                              margin: EdgeInsets.only(left: 14, right: 14),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16)),
-                              height: 71,
-                              width: 62,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(16),
-                                child: Image.asset(
-                                  "assets/images/antiVirus.jpg",
-                                  fit: BoxFit.cover,
-                                ),
-                              )),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Anti Virus Installation",
-                                style: TextStyle(
-                                    fontSize: 17.81, fontWeight: FontWeight.w700),
-                              ),
-                              Text(
-                                "Lorem ipsum dolor sit amet, consecter ",
-                                style: TextStyle(
-                                  fontSize: 11.52,
-                                ),
-                              ),
-                              Text(
-                                "Abc Service Provider ",
-                                style: TextStyle(fontSize: 11.52, height: 0.8),
-                              ),
-                              const SizedBox(height: 3,),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.star_rounded,
-                                    size: 12,color: Color(0xFFFFC23C),
-                                  ),
-                                  const SizedBox(width: 5),
-                                  Text(
-                                    "4.3",
-                                    style: TextStyle(fontSize: 10,color: Color(0xFFFFC23C),fontWeight: FontWeight.w700)
-                                  )
-                            ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite_border_rounded,
-                              size: 25,
-                              color: Colors.redAccent,
-                            )),
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.trolley,
-                                  size: 25,
-                                )),
-                            Text("INR 5,999 "),
-                            const SizedBox(
-                              width: 10,
-                            )
-                          ],
-                        ),
-                      ),
-                    ]),
-                  ),
-                      
-                      
-                      const SizedBox(
-                    height: 21,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0xFFECF9FF)),
-                    height: 114,
-                    width: double.infinity,
-                    child: Stack(children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                              margin: EdgeInsets.only(left: 14, right: 14),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16)),
-                              height: 71,
-                              width: 62,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(16),
-                                child: Image.asset(
-                                  "assets/images/antiVirus.jpg",
-                                  fit: BoxFit.cover,
-                                ),
-                              )),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Anti Virus Installation",
-                                style: TextStyle(
-                                    fontSize: 17.81, fontWeight: FontWeight.w700),
-                              ),
-                              Text(
-                                "Lorem ipsum dolor sit amet, consecter ",
-                                style: TextStyle(
-                                  fontSize: 11.52,
-                                ),
-                              ),
-                              Text(
-                                "Abc Service Provider ",
-                                style: TextStyle(fontSize: 11.52, height: 0.8),
-                              ),
-                             const SizedBox(height: 3,),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.star_rounded,
-                                    size: 12,color: Color(0xFFFFC23C),
-                                  ),
-                                  const SizedBox(width: 5),
-                                  Text(
-                                    "4.3",
-                                    style: TextStyle(fontSize: 10,color: Color(0xFFFFC23C),fontWeight: FontWeight.w700)
-                                  )
-                            ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite_border_rounded,
-                              size: 25,
-                              color: Colors.redAccent,
-                            )),
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.trolley,
-                                  size: 25,
-                                )),
-                            Text("INR 5,999 "),
-                            const SizedBox(
-                              width: 10,
-                            )
-                          ],
-                        ),
-                      ),
-                    ]),
-                  ),
-              
-              
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
+                  SizedBox(height: 21),
+                  for (var service in services) ServiceCard(service),
                 ],
               ),
             ),
           ),
-        
-          Positioned(left: 0,
-          right: 0,
-          bottom:0 ,
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
             child: Container(
-              alignment: Alignment.bottomLeft,
-              height: 101,
-              width: double.infinity,
-              decoration: BoxDecoration(border: Border.all(color: Colors.black12)),
-            ),
+                height: 100, // Adjust the height as needed
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Total Price",
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black),
+                        ),
+                        // const SizedBox(height: 0.2,),
+                        Row(
+                          children: [
+                            Text(" \u20B9",
+                                style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.black)),
+                            Text(" 5,999",
+                                style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.black)),
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 47,
+                      width: 215,
+                      child: FloatingActionButton(
+                        onPressed: () {},
+                        elevation: 0,
+                        backgroundColor: Color(0xFFECF9FF),
+                        child: TextButton(
+                          child:const  Text(
+                          "Checkout",
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w700,color: Colors.black),  
+                          ),
+                          onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentScreen(),));
+                    },
+                          
+                        ),
+                      ),
+                    ),
+                  ],
+                )),
           )
-          ]
-        ),
+        ],
       ),
-      
-       
-           
-          
-        
     );
   }
 }
+    

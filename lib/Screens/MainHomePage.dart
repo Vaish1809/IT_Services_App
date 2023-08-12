@@ -3,6 +3,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_container/easy_container.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:orinova_it_servicesapp/Screens/notifications.dart';
+import 'package:orinova_it_servicesapp/Screens/selected%20categories.dart';
+import 'package:animated_flip_counter/animated_flip_counter.dart';
 
 class MainHomePage extends StatefulWidget {
   MainHomePage({super.key});
@@ -13,12 +15,11 @@ class MainHomePage extends StatefulWidget {
 
 class _MainHomePageState extends State<MainHomePage> {
   final List<String> imgList = [
-
-   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-   'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
   ];
 
   @override
@@ -31,13 +32,20 @@ class _MainHomePageState extends State<MainHomePage> {
           children: [
             Padding(
               padding: EdgeInsets.only(top: 60, left: 25, right: 25),
-              child: Row(
+              child:
+               Row(
                 children: [
-                  Image.asset("assets/images/logo.png",height: 40,),
+                  Image.asset(
+                    "assets/images/logo.png",
+                    height: 40,
+                  ),
                   const Spacer(),
-                  const Icon(
-                    Icons.favorite_outline_sharp,
-                    size: 35,
+                  IconButton(
+                    icon: Icon(
+                      Icons.favorite_border_rounded,
+                      size: 30,
+                    ),
+                    onPressed: () {},
                     color: Colors.redAccent,
                   ),
                   IconButton(
@@ -46,12 +54,12 @@ class _MainHomePageState extends State<MainHomePage> {
                         builder: (context) => NotificationsScreen(),
                       ));
                     },
-                    icon: const Icon(Icons.notification_add_outlined),
-                    iconSize: 32,
+                    icon: const Icon(Icons.notifications_none_rounded),
+                    iconSize: 30,
                   )
                 ],
               ),
-            ),
+       ),
             const SizedBox(
               height: 40,
             ),
@@ -63,7 +71,7 @@ class _MainHomePageState extends State<MainHomePage> {
                           borderRadius: BorderRadius.circular(30)),
                       child: Center(
                         child: ClipRRect(
-                     borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(20),
                           child: Image.network(
                             item,
                             fit: BoxFit.cover,
@@ -94,10 +102,14 @@ class _MainHomePageState extends State<MainHomePage> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                     
+                      
+                    Text(
                         "350",
                         style: TextStyle(
-                            fontSize: 22.14, fontWeight: FontWeight.bold),
+                            fontSize: 22.14, fontWeight: FontWeight.bold
+ 
+  ),
                       ),
                       Text(
                         "projects done",
@@ -122,6 +134,7 @@ class _MainHomePageState extends State<MainHomePage> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+
                       Text(
                         "350",
                         style: TextStyle(
@@ -141,20 +154,25 @@ class _MainHomePageState extends State<MainHomePage> {
             ),
             const Padding(
               padding: EdgeInsets.only(left: 25, right: 25),
-              child: Align(
+              child:
+               Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Top Stacks",
                     style:
                         TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold),
                   )),
-            ),
+         ),
             Container(
               height: 61,
               padding: EdgeInsets.only(right: 25, left: 25),
               child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
+        
+
+       
                   child: Row(
+                    
                     children: [
                       Image.asset("assets/images/html.png"),
                       const SizedBox(
@@ -192,88 +210,144 @@ class _MainHomePageState extends State<MainHomePage> {
                         height: 61,
                       ),
                     ],
-                  )),
+                  ),
+                  ),
             ),
             const Padding(
               padding: EdgeInsets.only(left: 25, right: 25),
-              child: Align(
+             child:
+               Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Our Services",
                     style:
                         TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold),
                   )),
-            ),
+       ),
 
-            // Padding(
-            //    padding: EdgeInsets.symmetric(horizontal:55),
-            //  child:
-            Wrap(
-              spacing: 20,
-              runSpacing: 20,
-              children: List.generate(
-                10, // Replace with your desired count
-                (index) => Container(
-                 // padding: EdgeInsets.all(22),
-                  //width: double.infinity,
-                width: (MediaQuery.of(context).size.width - 70) / 2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                   // color: Color.fromARGB(255, 255, 255, 255),
-                  ),
-                  child: Center(
-                    child: Stack(
-                 
-                      children: [
-                        
-                        Positioned(
-            bottom: 0,
-            child: Container(
-              //padding: EdgeInsets.all(22),
-              color: Color.fromARGB(255, 138, 81, 81),
-              height: 66,
-              width: (MediaQuery.of(context).size.width - 70) / 2,
-             
-            ),
-          ),
-                        Column(
-                        children: [
-                          Container(
-                            child: Image.asset(
-                              "assets/images/Android.png",
-                              fit: BoxFit.fill,
+            Padding(
+              padding: EdgeInsets.only(bottom: 100),
+              child: Wrap(
+                  spacing: 20,
+                  runSpacing: 20,
+                  children: List.generate(
+                    6, // Replace with your desired count
+                    (index) => GestureDetector(
+                      onTap: (){
+                                   Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SelectedCategoriesList(),
                             ),
-                            height: 80,
-                            width: 80,
-                          ),
-                          Text(
-                            "Android App",
-                            style: TextStyle(fontSize: 17.81),
-                          ),
-                        ],
+                          );
+                              },
+                      child: Container(
+                        height: 110,
+                        width: 180,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        child: Stack(
+                          children: [
+                            Positioned.fill(
+                              top: 40,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0x33DBDBDB),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                             alignment: Alignment.bottomCenter,
+                             padding: EdgeInsets.only(bottom: 10),
+                                child: const Text(
+                                  "Website",
+                                  style: TextStyle(
+                                      fontSize: 17.81, fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 0,
+                              left: 50,
+                              right: 50,
+                              child: Image.asset(
+                                "assets/images/Android.png", // Replace with your image URL
+                                fit: BoxFit.cover,
+                                height: 81,
+                                width: 81,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    
-                      ],
-                      
                     ),
-                  ),
-                ),
-              ),
-            ),
-            //  ),
-          ],
+                  )),
+            )
+                       ],
         ),
       ),
     );
   }
 }
-            // Container(
+            // Wrap(
+            //   spacing: 20,
+            //   runSpacing: 20,
+            //  children:
+            //   List.generate(
+            //     10, // Replace with your desired count
+            //     (index) => Container(
+            //       width: (MediaQuery.of(context).size.width - 70) / 2,
+            //       decoration: BoxDecoration(
+            //         borderRadius: BorderRadius.circular(8),
+            //       ),
+            //   child: Center(
+            //     child: Stack(
+            //       children: [
+            // SizedBox(
+            //           height: 105,
+            //           width: 180,
+            //   // color: const Color.fromARGB(255, 250, 250, 250),
+            //         child: Container(height: 66,color: Colors.black12,),
+            //         ),
+            // Align(
+            //   alignment: Alignment.bottomCenter,
+            //   child: Container(height: 66,alignment: Alignment.bottomCenter,color: Colors.black12,)),
+            //       Positioned(
+            //         bottom: 0,
+            //         child: Container(
+            //           color: Color.fromARGB(255, 138, 81, 81),
+            //           height: 66,
+            //           width: (MediaQuery.of(context).size.width - 70) / 2,
+            //         ),
+            //       ),
+            //       Column(
+            //         children: [
+            //           Container(
+            //             child: Image.asset(
+            //               "assets/images/Android.png",
+            //               fit: BoxFit.fill,
+            //             ),
+            //             height: 80,
+            //             width: 80,
+            //           ),
+            //           Text(
+            //             "Android App",
+            //             style: TextStyle(fontSize: 17.81),
+            //           ),
+            //         ],
+            //       ),
+            //               ],
+            //             ),
+            //            ),
+            //         ),
+            //       ),
+            //  ),
+            //  ),
+   
+// Container(
 
-            //   child: Column(children:[ Image.asset("assets/images/Android.png"),
-            //   Container(height: 66,width: 180,)]
+//   child: Column(children:[ Image.asset("assets/images/Android.png"),
+//   Container(height: 66,width: 180,)]
 
-            //   ),
-            // )
+//   ),
+// )
 //  Expanded(
 //                   child: GridView.builder(
 //                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -286,7 +360,7 @@ class _MainHomePageState extends State<MainHomePage> {
 //                       itemBuilder: (context, index) {
 //                         return SizedBox(
 //                           height: 77,
-                        
+
 //                           child: GestureDetector(
 //                             onTap: (){
 //                                  Navigator.push(
@@ -297,7 +371,7 @@ class _MainHomePageState extends State<MainHomePage> {
 //                         );
 //                             },
 //                             child: Container(
-                                            
+
 //                               decoration: BoxDecoration(
 //                                 borderRadius: BorderRadius.circular(8),
 //                                 color: Color(0xFFECF9FF),
@@ -318,36 +392,34 @@ class _MainHomePageState extends State<MainHomePage> {
 //                         );
 //                       })
 
+// GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//               crossAxisCount: 2, // Two columns in the grid
+//               crossAxisSpacing: 20,
+//               mainAxisSpacing: 23,
+//              ),
+//               itemCount:4 ,
+//               itemBuilder: (context, index) {
+//             return Container(color: Colors.blue,
+// child: Column(
+//   children: [
+//     Container(
+//       child: Image.asset(
+//         "assets/images/Android.png",
+//         fit: BoxFit.fill,
+//       ),
+//       height: 80,
+//       width: 80,
+//     ),
+//     Text(
+//       "Android App",
+//       style: TextStyle(fontSize: 17.81),
+//     )
+//   ],
+// ),
+// );
+//   },
 
-            // GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            //               crossAxisCount: 2, // Two columns in the grid
-            //               crossAxisSpacing: 20,
-            //               mainAxisSpacing: 23,
-            //              ),
-            //               itemCount:4 ,
-            //               itemBuilder: (context, index) {
-            //             return Container(color: Colors.blue,
-                // child: Column(
-                //   children: [
-                //     Container(
-                //       child: Image.asset(
-                //         "assets/images/Android.png",
-                //         fit: BoxFit.fill,
-                //       ),
-                //       height: 80,
-                //       width: 80,
-                //     ),
-                //     Text(
-                //       "Android App",
-                //       style: TextStyle(fontSize: 17.81),
-                //     )
-                //   ],
-                // ),
-              // );
-            //   },
-             
-
-            // )
+// )
 //           ],
 //         ),
 //       ),
@@ -381,61 +453,55 @@ class _MainHomePageState extends State<MainHomePage> {
 //             height: 66,
 //             width: 180,
 //               )
-          
-            
-  //           child:Column(
-  // children: [
-  //   Image.asset("assets/images/Android.png",fit: BoxFit.contain,height: 82,width:80 ,),
-  //        Text("Android App",style: TextStyle(fontSize: 17.81),)] ,      
-  //    ),
 
-            
+//           child:Column(
+// children: [
+//   Image.asset("assets/images/Android.png",fit: BoxFit.contain,height: 82,width:80 ,),
+//        Text("Android App",style: TextStyle(fontSize: 17.81),)] ,
+//    ),
 
- 
-    // Column(
-    //     mainAxisAlignment: MainAxisAlignment.center,
-    //     children: [
-    //       Image.asset("assets/images/Android.png",fit: BoxFit.contain,height: 82,width:80 ,),
-    //       Text("Android App",style: TextStyle(fontSize: 17.81),)
-    //     ],
-    //    ),
-    //  )
+// Column(
+//     mainAxisAlignment: MainAxisAlignment.center,
+//     children: [
+//       Image.asset("assets/images/Android.png",fit: BoxFit.contain,height: 82,width:80 ,),
+//       Text("Android App",style: TextStyle(fontSize: 17.81),)
+//     ],
+//    ),
+//  )
 
 //         ]
-             
+
 //     ),
 //           )
 //         ]
 //       )
 
-    
 //     );
 //   }
 // }
 
+//       GridView(
+//           gridDelegate:
+//               SliverGridDelegateWithFixedCrossAxisCount(
+//                 crossAxisCount: 2,
+//                 crossAxisSpacing: 20,
+// ),
+// padding: EdgeInsets.only(left: 25,right: 25),
+// scrollDirection: Axis.vertical,
+// children: [
+//   Container(
+//     height: 107,
+//     child: Stack(children: [
+//       Container(
+//         height: 66,
+//         width: 180,
+//         color:Color.fromARGB(200, 219, 219, 219),
+//  )
+//     ]),
+//   )
+// ],
+// ),
 
-    //       GridView(
-    //           gridDelegate:
-    //               SliverGridDelegateWithFixedCrossAxisCount(
-    //                 crossAxisCount: 2,
-    //                 crossAxisSpacing: 20,
-    // ),
-    // padding: EdgeInsets.only(left: 25,right: 25),
-    // scrollDirection: Axis.vertical,
-    // children: [
-    //   Container(
-    //     height: 107,
-    //     child: Stack(children: [
-    //       Container(
-    //         height: 66,
-    //         width: 180,
-    //         color:Color.fromARGB(200, 219, 219, 219),
-    //  )
-    //     ]),
-    //   )
-    // ],
-    // ),
-   
 //         ],
 //       ),
 //     );

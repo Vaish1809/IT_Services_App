@@ -32,94 +32,142 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
         body: Container(
           margin: const EdgeInsets.all(25),
-          constraints: BoxConstraints.expand(),
+         // constraints: BoxConstraints.expand(),
           // padding: const EdgeInsets.all(22),
-          child: Column(
-            children: [
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color(0x33DBDBDB),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 16,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0x33DBDBDB),
+                    borderRadius: BorderRadius.circular(16),
                   ),
-                  controller: controller,
-                  decoration: InputDecoration(
-                    hintText: "Search ",
-                    border: InputBorder.none,
-                    labelStyle: const TextStyle(fontSize: 16),
-                    prefixIcon: Icon(Icons.search, color: Colors.black),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {
-                        controller.clear();
-                      },
+                  child: TextField(
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                    controller: controller,
+                    decoration: InputDecoration(
+                      hintText: "Search ",
+                      border: InputBorder.none,
+                      labelStyle: const TextStyle(fontSize: 16),
+                      prefixIcon: Icon(Icons.search, color: Colors.black),
+                      suffixIcon: IconButton(
+                        icon: const Icon(Icons.clear),
+                        onPressed: () {
+                          controller.clear();
+                        },
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 21,
-              ),
-              Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Our Services",
-                    style:
-                        TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold),
-                  )),
-              const SizedBox(
-                height: 21,
-              ),
-              Expanded(
-                  child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2, // Two columns in the grid
-                          crossAxisSpacing: 20,
-                          mainAxisSpacing: 23,
-                          childAspectRatio: 2.0),
-                      itemCount:
-                          15, // Replace with the total number of rectangles you want
-                      itemBuilder: (context, index) {
-                        return SizedBox(
-                          height: 77,
-                        
-                          child: GestureDetector(
-                            onTap: (){
-                                 Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SelectedCategoriesList(),
-                          ),
-                        );
-                            },
-                            child: Container(
-                                            
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Color(0xFFECF9FF),
-                              ),
-                              // Replace with your desired color
-                              child: Center(
-                                child: Text(
-                                  "Android Development",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15.81,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
+                const SizedBox(
+                  height: 21,
+                ),
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Our Services",
+                      style:
+                          TextStyle(fontSize: 22.14, fontWeight: FontWeight.bold),
+                    )),
+                const SizedBox(
+                  height: 21,
+                ),
+                // Expanded(
+                //     child: GridView.builder(
+                //         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                //             crossAxisCount: 2, // Two columns in the grid
+                //             crossAxisSpacing: 20,
+                //             mainAxisSpacing: 23,
+                //             childAspectRatio: 2.0),
+                //         itemCount:
+                //             15, // Replace with the total number of rectangles you want
+                //         itemBuilder: (context, index) {
+                //           return SizedBox(
+                //             height: 77,
+                          
+                          Wrap(
+                spacing: 20,
+                  runSpacing: 20,
+                  children: List.generate(
+                    18, // Replace with your desired count
+                    (index) => GestureDetector(
+                      onTap: (){
+                                   Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SelectedCategoriesList(),
                             ),
-                          ),
-                        );
-                      }))
-            ],
+                          );
+                              },
+                                  child: Container(
+                                    width: 170,
+                                    height: 77,            
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    color: Color(0xFFECF9FF),
+                                  ),
+                                  // Replace with your desired color
+                                  child: Center(
+                                    child: Text(
+                                      "Android Development",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 15.81,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                                           ),
+                               ),
+                    )
+                  )
+                        //                     ),
+                        //   );
+                        // }))
+              ],
+            ),
           ),
         ),
        );
   }
 }
+
+                //         )
+                        //   child: GestureDetector(
+                        //     onTap: (){
+                        //          Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => SelectedCategoriesList(),
+                        //   ),
+                        // );
+                        //     },
+
+                //                   Wrap(
+                // spacing: 20,
+                // runSpacing: 20,
+                // children:
+                //              List.generate(
+                //               10,
+                            //    child: Container(
+                                              
+                            //     decoration: BoxDecoration(
+                            //       borderRadius: BorderRadius.circular(8),
+                            //       color: Color(0xFFECF9FF),
+                            //     ),
+                            //     // Replace with your desired color
+                            //     child: Center(
+                            //       child: Text(
+                            //         "Android Development",
+                            //         style: TextStyle(
+                            //           color: Colors.black,
+                            //           fontSize: 15.81,
+                            //         ),
+                            //         textAlign: TextAlign.center,
+                            //       ),
+                            //     ),
+                            //                              ),
+                            //  ),

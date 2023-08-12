@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orinova_it_servicesapp/Screens/Selected%20Categories%20WIdgets/ServiceCard.dart';
 import 'package:orinova_it_servicesapp/Screens/Selected%20Categories%20WIdgets/model.dart';
 import 'package:orinova_it_servicesapp/Screens/Service_details.dart';
-
+import 'package:custom_check_box/custom_check_box.dart';
 class SelectedCategoriesList extends StatefulWidget {
   const SelectedCategoriesList({Key? key}) : super(key: key);
 
