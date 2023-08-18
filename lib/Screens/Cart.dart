@@ -121,20 +121,19 @@ class _CartScreenState extends State<CartScreen> {
                       height: 47,
                       width: 215,
                       child: FloatingActionButton(
-                        onPressed: () {},
+                        onPressed: () {  Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentScreen(),));},
                         elevation: 0,
                         backgroundColor: Color.fromARGB(150, 236, 249, 255,),
-                        child: TextButton(
-                          child:const  Text(
+                        child:
+                        Text(
                           "Checkout",
                           style: TextStyle(
                               fontSize: 14, fontWeight: FontWeight.w700,color: Color(0xFF303841)),  
                           ),
-                          onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentScreen(),));
-                    },
+                  
+                    
                           
-                        ),
+                      
                       ),
                     ),
                   ],

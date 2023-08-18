@@ -12,7 +12,9 @@ class PaymentScreen extends StatefulWidget {
 class _PaymentScreenState extends State<PaymentScreen> {
 //  inal TextEditingController controller = TextEditingController();
   bool shouldCheck = false;
-  bool shouldCheckDefault = false;
+  bool shouldCheckDefault1 = false;
+  bool shouldCheckDefault2 = false;
+  bool shouldCheckDefault3 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,13 +69,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                       Spacer(),
                       CustomCheckBox(
-                        value: shouldCheckDefault,
+                        value: shouldCheckDefault1,
                         splashColor: Colors.blue.withOpacity(0.4),
                         tooltip: 'Custom Check Box',
                         splashRadius: 40,
                         onChanged: (val) {
                           setState(() {
-                            shouldCheckDefault = val;
+                            shouldCheckDefault1 = val;
                           });
                         },
                       ),
@@ -104,13 +106,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                       Spacer(),
                       CustomCheckBox(
-                        value: shouldCheckDefault,
+                        value: shouldCheckDefault2,
                         splashColor: Colors.blue.withOpacity(0.4),
                         tooltip: 'Custom Check Box',
                         splashRadius: 40,
                         onChanged: (val) {
                           setState(() {
-                            shouldCheckDefault = val;
+                            shouldCheckDefault2 = val;
                           });
                         },
                       ),
@@ -142,13 +144,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                       Spacer(),
                       CustomCheckBox(
-                        value: shouldCheckDefault,
+                        value: shouldCheckDefault3,
                         splashColor: Colors.blue.withOpacity(0.4),
                         tooltip: 'Custom Check Box',
                         splashRadius: 40,
                         onChanged: (val) {
                           setState(() {
-                            shouldCheckDefault = val;
+                            shouldCheckDefault3 = val;
                           });
                         },
                       ),
